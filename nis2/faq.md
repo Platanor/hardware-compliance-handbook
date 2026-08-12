@@ -1,0 +1,25 @@
+**Practical FAQ on NIS2 for hardware/IoT manufacturers and their customers**
+
+**We make IoT hardware. Does NIS2 apply to us the way the CRA does?**
+Usually not directly, and it's a different kind of question entirely. The CRA and RED regulate your *products*. NIS2 regulates *organisations* — specifically, entities in the Annex I/II sectors (energy, health, digital infrastructure, manufacturing of certain product categories, and others) that are at least medium-sized. Most product-focused hardware manufacturers are not themselves NIS2 in-scope entities unless they also fall into one of those sectors as an organisation (for example, if you also operate as a managed security service provider, or you manufacture within specific Annex II manufacturing subsectors like computer/electronic/optical products, electrical equipment, or machinery — check Annex II point 5 against your actual NACE classification).
+
+**Our customer is a NIS2 essential entity. Does that put obligations on us as their supplier?**
+Not directly under NIS2 itself — NIS2 doesn't reach down your supply chain and impose its obligations on you by name. But Article 21(2)(d) explicitly requires NIS2 entities to manage "supply chain security," including "vulnerabilities specific to each direct supplier" and the "overall quality of products and cybersecurity practices" of their suppliers. In practice, this means a NIS2-regulated customer may contractually push security requirements, documentation demands, or audit rights down to you as a supplier — not because NIS2 legally obligates you, but because it obligates *them* to account for you.
+
+**Are we "essential" or "important"?**
+That depends on your sector classification and size, not on how critical you feel your work is. Annex I entities that exceed the medium-enterprise threshold are essential by default; specific categories (qualified trust service providers, TLD registries, DNS providers, certain public administration and public-communications entities) are essential regardless of size. Everything else in Annex I or II that's in scope is "important" by default, unless a Member State specifically designates it as essential under the discretionary categories in Article 2(2)(b)-(e). Check your national list once published (due by 17 April 2025 per Art. 3(3)) rather than assuming.
+
+**What's the practical difference between being essential vs. important?**
+Essential entities get proactive, ongoing supervision — regulators can inspect and audit you whether or not there's a known problem, including random checks. Important entities are only checked reactively, once there's already evidence of an alleged problem. The maximum fine ceiling is also higher for essential entities (€10M/2% vs. €7M/1.4%). See [`obligations.md`](obligations.md) for the full comparison.
+
+**How is this different from the CRA's product risk classes (Default, Important I/II, Critical)?**
+Completely different axis. The CRA's classes describe how risky a *product* is and what conformity-assessment route applies to it. NIS2's essential/important split describes how critical an *organisation* is and what supervisory regime applies to it. A company could make a CRA "Default" product while being a NIS2 "essential" entity (if it also runs, say, critical digital infrastructure) — the two classifications don't map onto each other.
+
+**We had a security incident. Do we report it under NIS2, the CRA, or both?**
+Depends on what you are and what happened. If you're a NIS2 in-scope entity and the incident affected your own network/information systems or service delivery in a way that meets the "significant incident" bar (severe operational disruption, financial loss, or considerable damage to others), you report under NIS2 Article 23. If you're a manufacturer and the incident is an actively exploited vulnerability or severe incident affecting a *product* you make, you report under CRA Article 14. These can both apply to the same underlying event if you're both a NIS2 entity and a CRA manufacturer — check both, don't assume one covers the other. See [`incident-reporting.md`](incident-reporting.md) for the side-by-side comparison.
+
+**When did NIS2 actually start applying?**
+Member States had until 17 October 2024 to transpose it into national law, with the transposed measures applying from **18 October 2024**. That's also when the old NIS1 Directive (2016/1148) was repealed. Unlike the CRA, NIS2 does not have a long multi-year staggered phase-in for its core obligations — the risk-management measures (Art. 21) and reporting obligations (Art. 23) both became live at national-transposition level from that single date, though implementation quality and enforcement readiness vary by Member State.
+
+**Where do I find the actual legal text?**
+[`../primary-sources/nis2-directive-eu-2022-2555.md`](../primary-sources/nis2-directive-eu-2022-2555.md) — note this copy's recitals are only partially captured (see the file's header note); the operative articles (1-46) and Annexes I-II (the sector lists) are complete.

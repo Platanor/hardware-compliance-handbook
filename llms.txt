@@ -1,0 +1,60 @@
+# Hardware Compliance Knowledge Base (Platanor Technologies)
+
+> Public, fact-checked knowledge base on EU hardware/IoT cybersecurity law — the Cyber Resilience Act (Regulation (EU) 2024/2847), the Radio Equipment Directive (Directive 2014/53/EU + cybersecurity delegated act), the NIS2 Directive (Directive (EU) 2022/2555), and the Cybersecurity Act / EUCC (Regulation (EU) 2019/881) — maintained by Platanor Technologies (platanor.com), an embedded security firm for IoT/hardware manufacturers in the EU. All content is in English. NOT legal advice — see README.md.
+
+## Processed guides — CRA (shorter, fact-checked against primary source)
+
+- [cra/overview.md](cra/overview.md): CRA regulation overview — scope, structure, chapters and annexes
+- [cra/definitions.md](cra/definitions.md): Official definitions and terminology (product with digital elements, RDPS, critical/important product)
+- [cra/essential-requirements.md](cra/essential-requirements.md): Annex I essential cybersecurity requirements + harmonised standards status (M/606)
+- [cra/product-risk-classes.md](cra/product-risk-classes.md): Product risk classification — Default, Important Class I/II, Critical
+- [cra/obligations-by-role.md](cra/obligations-by-role.md): Manufacturer, importer, distributor obligations (Chapter II)
+- [cra/timeline-deadlines.md](cra/timeline-deadlines.md): Key deadlines and transitional provisions
+- [cra/vulnerability-reporting.md](cra/vulnerability-reporting.md): Vulnerability and incident reporting (Article 14)
+- [cra/penalties-enforcement.md](cra/penalties-enforcement.md): Penalties and market surveillance
+- [cra/self-assessment-maturity-model.md](cra/self-assessment-maturity-model.md): ENISA SME Cyber Resilience Maturity Assessment Model
+- [cra/faq.md](cra/faq.md): Practical FAQ for hardware/IoT manufacturers
+
+## Processed guides — RED (shorter, fact-checked against primary source)
+
+- [red/overview.md](red/overview.md): RED overview — scope, structure, chapters and annexes, relationship to CRA
+- [red/essential-requirements.md](red/essential-requirements.md): Art. 3(3)(d)(e)(f) cybersecurity requirements, EN 18031 restrictions
+- [red/obligations-by-role.md](red/obligations-by-role.md): Manufacturer, importer, distributor obligations (Chapter II)
+- [red/timeline-deadlines.md](red/timeline-deadlines.md): Key deadlines — directive, delegated act, harmonised standards
+- [red/penalties-enforcement.md](red/penalties-enforcement.md): Penalties (national, not EU-wide) and market surveillance
+- [red/faq.md](red/faq.md): Practical FAQ for hardware/IoT manufacturers
+
+## Processed guides — NIS2 (shorter, fact-checked against primary source)
+
+- [nis2/overview.md](nis2/overview.md): NIS2 overview — scope, essential/important entity split, structure, relationship to CRA/RED
+- [nis2/obligations.md](nis2/obligations.md): Governance, Art. 21 risk-management measures, essential vs. important supervision, fines
+- [nis2/incident-reporting.md](nis2/incident-reporting.md): Art. 23 reporting obligations, notification clock, comparison with CRA Art. 14
+- [nis2/faq.md](nis2/faq.md): Practical FAQ for hardware/IoT manufacturers and their customers
+
+## Processed guides — CSA / EUCC (shorter, fact-checked against primary source)
+
+- [csa/overview.md](csa/overview.md): CSA overview — ENISA mandate + cybersecurity certification framework, relationship to CRA/RED/NIS2
+- [csa/eucc-certification.md](csa/eucc-certification.md): EUCC certification mechanics per the CSA framework — assurance levels, voluntary status, issuing bodies
+- [csa/faq.md](csa/faq.md): Practical FAQ for hardware/IoT manufacturers on CSA/EUCC
+
+## Cross-cutting
+
+- [relationship-to-other-eu-law.md](relationship-to-other-eu-law.md): CRA's relationship with RED, NIS2, AI Act, CSA/EUCC, GDPR
+- [cra-red-ce-marking-guide.md](cra-red-ce-marking-guide.md): Practical step-by-step guide to CE marking under both CRA and RED
+
+## Primary sources (English, unmodified official text — cite these for exact article wording)
+
+- [primary-sources/index.md](primary-sources/index.md): Index and reuse terms for the primary-source mirror
+- [primary-sources/cra-regulation-eu-2024-2847.md](primary-sources/cra-regulation-eu-2024-2847.md): Full text, Regulation (EU) 2024/2847, all articles + Annexes I-VIII. Chunk by `### Article N` headings.
+- [primary-sources/cra-standardisation-request-m606-c-2025-618.md](primary-sources/cra-standardisation-request-m606-c-2025-618.md): C(2025) 618 final, standardisation request M/606
+- [primary-sources/red-directive-2014-53-eu.md](primary-sources/red-directive-2014-53-eu.md): Directive 2014/53/EU, Radio Equipment Directive (original 2014 text, not consolidated)
+- [primary-sources/red-delegated-regulation-eu-2022-30.md](primary-sources/red-delegated-regulation-eu-2022-30.md): Delegated Regulation (EU) 2022/30
+- [primary-sources/red-delegated-regulation-eu-2023-2444-amending.md](primary-sources/red-delegated-regulation-eu-2023-2444-amending.md): Delegated Regulation (EU) 2023/2444 (amends 2022/30)
+- [primary-sources/red-implementing-decision-eu-2025-138-en-18031.md](primary-sources/red-implementing-decision-eu-2025-138-en-18031.md): Implementing Decision (EU) 2025/138
+- [primary-sources/nis2-directive-eu-2022-2555.md](primary-sources/nis2-directive-eu-2022-2555.md): Directive (EU) 2022/2555, NIS2. Articles 1-46 complete, Annexes I-II complete; recitals partially captured
+- [primary-sources/cybersecurity-act-eu-2019-881.md](primary-sources/cybersecurity-act-eu-2019-881.md): Regulation (EU) 2019/881, Cybersecurity Act. Articles 1-69 + Annex complete; recitals not captured
+
+## Optional
+
+- [README.md](README.md): Full disclaimer, methodology, and CC BY 4.0 license terms for the processed guides
+- [LICENSE](LICENSE): License text
