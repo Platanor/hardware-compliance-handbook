@@ -246,6 +246,14 @@ For a summary view, the table below maps each point of Annex I to concrete tools
 | **Part II (7)** | Update-channel protection | TUF (The Update Framework), Cosign/Ed25519 signing | prEN 40000-1-3 |
 | **Part II (8)** | Free-of-charge patches | Public open CDN for patches, no authentication | prEN 40000-1-3 |
 
+**Companion resource: ENISA's Secure by Design and Default Playbook**
+
+On 30 July 2026, ENISA published its own official Secure by Design and Default Playbook, distributed under CC-BY 4.0 as a GitHub repository: [github.com/enisaeu/enisa-sbd-playbook](https://github.com/enisaeu/enisa-sbd-playbook) (source PDF: [ENISA publication page](https://www.enisa.europa.eu/publications/enisa-secure-by-design-and-default-playbook)).
+
+It approaches the same requirements from the opposite direction to the matrix above. Instead of starting from an Annex I point and arriving at an engineering solution, it starts from 22 engineering principles — 14 grouped under Secure by Design (trust boundaries and threat modelling, least privilege, secure coding practices, supply-chain controls, and others), 8 under Secure by Default (minimisation of default services, secure communication by default, automated updates, and others) — and its Annex C maps each one to the corresponding Annex I requirement. Each principle is documented as a one-page playbook with an objective, a checklist, minimum evidence, and a release gate.
+
+Useful as a second, EU-official cross-check when auditing an existing product's architecture: work through the 22 principles independently, then confirm each gap found also shows up against the matching point in the table above. It does not replace the article-by-article legal analysis in this file — the playbook is deliberately non-legal guidance and does not name specific Annex I sub-points inside the principle text itself; the mapping lives only in its Annex C.
+
 **Conclusions and practical recommendations**
 
 The shift in the EU regulatory landscape requires companies to systematically rethink their approach to designing, developing, and supporting software and hardware products. The Annex I Part I requirements turn cybersecurity from an optional feature into a fundamental engineering characteristic of the product, without which market entry becomes legally impossible. At the same time, Annex I Part II requires building continuous DevSecOps processes focused on supply-chain transparency (via the SBOM) and rapid response to new threats.

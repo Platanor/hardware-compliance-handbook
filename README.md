@@ -49,7 +49,7 @@ The processed guides have been fact-checked against the primary text of each reg
 |---|---|
 | [`cra/overview.md`](cra/overview.md) | Adoption context, scope, structure of the regulation (chapters and annexes) |
 | [`cra/definitions.md`](cra/definitions.md) | Official definitions and terminology (product with digital elements, RDPS, critical/important product, etc.) |
-| [`cra/essential-requirements.md`](cra/essential-requirements.md) | Annex I essential cybersecurity requirements + status of harmonised standards development (mandate M/606) |
+| [`cra/essential-requirements.md`](cra/essential-requirements.md) | Annex I essential cybersecurity requirements + status of harmonised standards development (mandate M/606); cross-referenced against ENISA's Secure by Design and Default Playbook |
 | [`cra/product-risk-classes.md`](cra/product-risk-classes.md) | Product risk classification: Default, Important Class I/II, Critical |
 | [`cra/obligations-by-role.md`](cra/obligations-by-role.md) | Manufacturer, importer, and distributor obligations (Chapter II) |
 | [`cra/timeline-deadlines.md`](cra/timeline-deadlines.md) | Key deadlines and transitional provisions |
