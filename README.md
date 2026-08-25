@@ -6,7 +6,7 @@
 
 Prepared by **Platanor Technologies** ([platanor.com](https://platanor.com)) — an embedded security firm for IoT device manufacturers.
 
-**Contents:** [Quick start](#quick-start) · [What this is](#what-this-is) · [Repository structure](#repository-structure) · [Methodology](#methodology-and-sourcing) · [Using with an LLM](#how-to-use-this-with-an-llm) · [Claude Skill](#installing-this-as-a-claude-skill) · [Feedback](#feedback) · [License](#license)
+**Contents:** [Quick start](#quick-start) · [What this is](#what-this-is) · [Repository structure](#repository-structure) · [Methodology](#methodology-and-sourcing) · [Using with an LLM](#how-to-use-this-with-an-llm) · [Claude Skill](#installing-this-as-a-claude-skill) · [Feedback](#feedback) · [License](#license) · [Discussions](https://github.com/Platanor/hardware-compliance-handbook/discussions)
 
 ---
 
@@ -136,6 +136,8 @@ Actively growing. Currently 25 processed documents across four regulations (CRA,
 ## Feedback
 
 Found an error, an outdated date, or an inaccurate interpretation? Let us know — contact details at [platanor.com](https://platanor.com), or open an issue or pull request directly. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for what belongs here and how to submit a change.
+
+Have a question, a use case to share, or want to suggest what should be covered next? Use [GitHub Discussions](https://github.com/Platanor/hardware-compliance-handbook/discussions) — issues/PRs are for content fixes, Discussions is for everything else.
 
 ## License
 
