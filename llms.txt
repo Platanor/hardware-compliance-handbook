@@ -37,6 +37,14 @@
 - [csa/eucc-certification.md](csa/eucc-certification.md): EUCC certification mechanics per the CSA framework — assurance levels, voluntary status, issuing bodies
 - [csa/faq.md](csa/faq.md): Practical FAQ for hardware/IoT manufacturers on CSA/EUCC
 
+## Technical reference (engineering depth, not regulatory summary)
+
+- [technical/sbom.md](technical/sbom.md): SBOM implementation for embedded/IoT firmware - CycloneDX vs SPDX, build-system generation (Yocto, Zephyr, Buildroot), VEX
+- [technical/secure-boot.md](technical/secure-boot.md): Secure boot architecture across platforms (UEFI, ARM TBBR, NXP HAB/AHAB, vendor implementations) and where real implementations diverge from the textbook chain-of-trust model
+- [technical/device-identity.md](technical/device-identity.md): Device identity engineering - hardware roots of trust, IEEE 802.1AR IDevID/LDevID, DICE, factory provisioning
+- [technical/secure-updates.md](technical/secure-updates.md): OTA update architecture beyond image signing - A/B partitioning, MCUboot swap vs. Direct-XIP, TUF/Uptane, delta updates, failure recovery
+- [technical/vulnerability-management.md](technical/vulnerability-management.md): Continuous CVE monitoring and prioritization pipeline for shipped devices - SBOM-to-CVE matching, CVSS/EPSS/KEV/SSVC, VEX, CVD
+
 ## Cross-cutting
 
 - [relationship-to-other-eu-law.md](relationship-to-other-eu-law.md): CRA's relationship with RED, NIS2, AI Act, CSA/EUCC, GDPR

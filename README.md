@@ -6,7 +6,7 @@
 
 Prepared by **Platanor Technologies** ([platanor.com](https://platanor.com)) — an embedded security firm for IoT device manufacturers.
 
-**Contents:** [Quick start](#quick-start) · [What this is](#what-this-is) · [Repository structure](#repository-structure) · [Methodology](#methodology-and-sourcing) · [Using with an LLM](#how-to-use-this-with-an-llm) · [Claude Skill](#installing-this-as-a-claude-skill) · [Feedback](#feedback) · [License](#license) · [Discussions](https://github.com/Platanor/hardware-compliance-handbook/discussions)
+**Contents:** [Quick start](#quick-start) · [What this is](#what-this-is) · [Repository structure](#repository-structure) · [Technical reference](#technical-reference-technical) · [Methodology](#methodology-and-sourcing) · [Using with an LLM](#how-to-use-this-with-an-llm) · [Claude Skill](#installing-this-as-a-claude-skill) · [Feedback](#feedback) · [License](#license) · [Discussions](https://github.com/Platanor/hardware-compliance-handbook/discussions)
 
 ---
 
@@ -15,6 +15,7 @@ Prepared by **Platanor Technologies** ([platanor.com](https://platanor.com)) —
 - **Just want an answer?** Open [`cra/faq.md`](cra/faq.md), [`red/faq.md`](red/faq.md), [`nis2/faq.md`](nis2/faq.md), or [`csa/faq.md`](csa/faq.md) — each is a practical Q&A for hardware/IoT manufacturers, no legal background required.
 - **Working with an LLM?** Drop a processed guide into your prompt and ask, e.g.: *"Using `cra/product-risk-classes.md` and `red/essential-requirements.md`, does a Wi-Fi-connected baby monitor need a notified body, or can we self-assess?"*
 - **Need the exact legal wording?** Every processed guide links back to its source in [`primary-sources/`](primary-sources/) — full official text, chunked by article.
+- **Need the engineering, not just the regulation?** [`technical/`](technical/) covers how to actually build the thing the law asks for — SBOM generation, secure boot, device identity, OTA updates, and CVE monitoring — at the depth an embedded engineer needs, not a compliance summary.
 - **Want this loaded automatically in Claude?** See [Installing this as a Claude Skill](#installing-this-as-a-claude-skill).
 
 ---
@@ -34,12 +35,13 @@ Prepared by **Platanor Technologies** ([platanor.com](https://platanor.com)) —
 
 Hardware and IoT manufacturers selling into the EU are increasingly subject to more than one regulation at once — the CRA governs the *product*, RED governs *radio equipment* specifically (with its own overlapping cybersecurity requirements), NIS2 governs certain *organisations* in critical sectors (including some manufacturers and their customers), and the Cybersecurity Act provides the *voluntary certification framework* (EUCC) that sits alongside all of them. This repository exists because treating any one of these in isolation gives an incomplete picture — a manufacturer can be in full CRA compliance and still miss a RED-specific requirement, or misjudge whether NIS2 reaches them indirectly through a customer's supply-chain obligations.
 
-The repository has two layers:
+The repository has three layers:
 
 1. **Processed guides** (`cra/`, `red/`, `nis2/`, `csa/`) — shorter, structured reference documents per regulation: overview, definitions/scope, essential requirements or obligations, deadlines, penalties, and a practical FAQ. Easy to use for a quick grasp of a topic, and each one is written to flag how it relates to the other three regulations, not just to stand alone.
-2. **Primary sources** (`primary-sources/`) — the full official text of each regulation and related act, unmodified. The source of truth for exact quotes, for humans and LLMs alike.
+2. **Technical reference** (`technical/`) — engineering-depth pages on how to actually implement what the regulations ask for: SBOM generation for firmware, secure boot across platforms, device identity and provisioning, OTA update architecture, and continuous vulnerability monitoring. Written for the person who has to build the thing, not just document that it exists.
+3. **Primary sources** (`primary-sources/`) — the full official text of each regulation and related act, unmodified. The source of truth for exact quotes, for humans and LLMs alike.
 
-The processed guides have been fact-checked against the primary text of each regulation and related sources (M/606, delegated/implementing acts) — methodology described below.
+The processed guides have been fact-checked against the primary text of each regulation and related sources (M/606, delegated/implementing acts); the technical reference pages have been fact-checked against vendor documentation, RFCs, and other primary technical sources — methodology described below.
 
 ## Repository structure
 
@@ -86,6 +88,18 @@ The processed guides have been fact-checked against the primary text of each reg
 | [`csa/eucc-certification.md`](csa/eucc-certification.md) | EUCC certification mechanics — assurance levels, voluntary status, issuing bodies |
 | [`csa/faq.md`](csa/faq.md) | Practical FAQ on CSA/EUCC for hardware/IoT manufacturers |
 
+### Technical reference (`technical/`)
+
+Engineering-depth pages, not regulatory summaries — each one names the CRA requirement it relates to, then goes deeper than any compliance document would on how implementations actually work and where they actually break.
+
+| File | What it covers |
+|---|---|
+| [`technical/sbom.md`](technical/sbom.md) | Building and maintaining an SBOM for embedded/IoT firmware: CycloneDX vs. SPDX, build-system generation (Yocto, Zephyr, Buildroot), VEX |
+| [`technical/secure-boot.md`](technical/secure-boot.md) | Secure boot across platforms (UEFI, ARM TBBR, NXP HAB/AHAB, vendor-specific implementations) and where real implementations diverge from the textbook chain-of-trust model |
+| [`technical/device-identity.md`](technical/device-identity.md) | Hardware roots of trust, IEEE 802.1AR IDevID/LDevID, TCG DICE, factory provisioning |
+| [`technical/secure-updates.md`](technical/secure-updates.md) | OTA update architecture beyond image signing: A/B partitioning, MCUboot swap vs. Direct-XIP, TUF/Uptane, delta updates, failure recovery |
+| [`technical/vulnerability-management.md`](technical/vulnerability-management.md) | Continuous CVE monitoring and prioritization for shipped devices: SBOM-to-CVE matching, CVSS/EPSS/KEV/SSVC, VEX, coordinated disclosure |
+
 ### Cross-cutting and primary sources
 
 | File | What it covers |
@@ -131,7 +145,7 @@ However you install it, this remains a knowledge base, not a certified complianc
 
 ## Status
 
-Actively growing. Currently 25 processed documents across four regulations (CRA, RED, NIS2, CSA/EUCC) plus 8 primary-source mirrors; more material is planned as the underlying legislation develops (new harmonised standards, delegated/implementing acts, Commission guidance, and the still-unmirrored EUCC scheme implementing act).
+Actively growing. Currently 25 processed documents across four regulations (CRA, RED, NIS2, CSA/EUCC), 5 technical reference documents (`technical/`), plus 8 primary-source mirrors; more material is planned as the underlying legislation develops (new harmonised standards, delegated/implementing acts, Commission guidance, and the still-unmirrored EUCC scheme implementing act) and as the technical layer expands to more implementation topics.
 
 ## Feedback
 
