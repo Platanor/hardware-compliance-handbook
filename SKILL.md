@@ -5,11 +5,13 @@ description: Reference knowledge base on EU hardware/IoT cybersecurity law, main
 
 # Hardware Compliance Knowledge Base
 
-This skill packages a public, fact-checked knowledge base covering the four main pieces of EU law that touch hardware and IoT cybersecurity, built and maintained by Platanor Technologies, an embedded-security firm for IoT/hardware manufacturers in the EU. The corpus has two layers, and knowing which one to reach for matters.
+This skill packages a public, fact-checked knowledge base covering the four main pieces of EU law that touch hardware and IoT cybersecurity, built and maintained by Platanor Technologies, an embedded-security firm for IoT/hardware manufacturers in the EU. The corpus has three layers, and knowing which one to reach for matters.
 
 **Layer 1 — processed guides** (`cra/`, `red/`, `nis2/`, `csa/`): shorter, topic-organized summaries written for engineers and compliance leads. Fact-checked against the primary source, but still a summary — good for orientation, explaining a concept, or answering a practical "what do I need to do" question. Each regulation's folder follows the same pattern: an `overview.md`, one or two files on the substantive obligations, and a `faq.md`.
 
 **Layer 2 — primary sources** (`primary-sources/`): unmodified mirrors of the official EU legal texts, in English, with provenance headers (source URL, CELEX number, retrieval date, coverage notes). Use this layer whenever the user needs the exact wording of an article, a legally precise citation, or when the summary in Layer 1 doesn't cover their question in enough depth.
+
+**Layer 3 — third-party material plus our cross-cutting analyses, split across two folders** (`resources/`, `sbom/`): frameworks and specifications referenced alongside this legislation, not part of EU law — use them as practical cross-checks, not as a compliance source. `sbom/` holds CycloneDX, SPDX, and VEX specifically (SBOM has its own named line in CRA Annex I, so it gets its own folder for visibility, plus worked examples of both formats). `resources/` holds the rest: PSA Certified, the ENISA Secure by Design and Default Playbook, and two files that are actually our own fact-checked analysis rather than third-party material (`relationship-to-other-eu-law.md`, `cra-red-ce-marking-guide.md`), same status as Layer 1, just organized by task instead of by regulation because they span more than one at once — `resources/index.md` marks which is which.
 
 ## Before answering anything from this knowledge base
 
@@ -19,7 +21,7 @@ Read `README.md` first if you haven't already — it carries the disclaimer that
 
 These four regulations regulate different things and a user's question often implicitly assumes only one applies. Before answering, work out which axis the question is on:
 
-- **Is this about a product's technical/security requirements before it can be sold (CE marking)?** → CRA (all products with digital elements) and/or RED (radio equipment specifically) — check both; RED has its own separate cybersecurity delegated act layered on top of the CRA-adjacent essential requirements. See `relationship-to-other-eu-law.md` and `cra-red-ce-marking-guide.md` for how the two interact.
+- **Is this about a product's technical/security requirements before it can be sold (CE marking)?** → CRA (all products with digital elements) and/or RED (radio equipment specifically) — check both; RED has its own separate cybersecurity delegated act layered on top of the CRA-adjacent essential requirements. See `resources/relationship-to-other-eu-law.md` and `resources/cra-red-ce-marking-guide.md` for how the two interact.
 - **Is this about an organisation's ongoing risk-management and incident-reporting obligations (not a specific product)?** → NIS2 — and only if the organisation is in an Annex I/II sector and above the size threshold. Most product-focused hardware manufacturers are *not* directly in scope; check `nis2/faq.md` first before assuming NIS2 applies.
 - **Is this about a voluntary certification scheme, assurance levels, or "can we get certified against something"?** → CSA/EUCC — voluntary by default, a different mechanism from CE-marking conformity assessment. See `csa/overview.md`.
 - **Is this about supply-chain pressure from a customer who is themselves NIS2-regulated?** → Still NIS2, but indirectly (Article 21(2)(d) supply-chain security) — see `nis2/faq.md`.
@@ -51,8 +53,12 @@ These four regulations regulate different things and a user's question often imp
 | **CSA/EUCC** — ENISA mandate + certification framework overview, relationship to CRA/RED/NIS2 | `csa/overview.md` |
 | **CSA/EUCC** — EUCC certification mechanics, assurance levels, voluntary status | `csa/eucc-certification.md` |
 | **CSA/EUCC** — quick practical questions | `csa/faq.md` |
-| How CRA interacts with RED, NIS2, CSA/EUCC, GDPR, AI Act | `relationship-to-other-eu-law.md` |
-| Step-by-step CE marking under both CRA and RED | `cra-red-ce-marking-guide.md` |
+| How CRA interacts with RED, NIS2, CSA/EUCC, GDPR, AI Act | `resources/relationship-to-other-eu-law.md` |
+| Step-by-step CE marking under both CRA and RED | `resources/cra-red-ce-marking-guide.md` |
+| Independent frameworks/playbooks used alongside this legislation (PSA Certified, ENISA playbook) | `resources/` — see `resources/index.md` |
+| SBOM formats (CycloneDX, SPDX), 2026 CISA minimum elements | `sbom/formats-and-specifications.md` |
+| VEX — CycloneDX VEX, CSAF VEX, OpenVEX, vocabulary mismatch | `sbom/vex.md` |
+| What an actual CycloneDX or SPDX file looks like, worked example with VEX | `sbom/examples.md` |
 | Exact article/annex wording, a legally precise citation | `primary-sources/` — see `primary-sources/index.md` for what's mirrored and what isn't |
 
 `llms.txt` has the same map in a more compact form if you just need file paths and one-line descriptions.

@@ -28,7 +28,7 @@
 
 ## Related files
 
-- [`cra-regulation-eu-2024-2847.md`](cra-regulation-eu-2024-2847.md) — the CRA regulates *products*; NIS2 regulates *entities/organisations*. A manufacturer can be in scope of both simultaneously in different capacities (see `relationship-to-other-eu-law.md`).
+- [`cra-regulation-eu-2024-2847.md`](cra-regulation-eu-2024-2847.md) — the CRA regulates *products*; NIS2 regulates *entities/organisations*. A manufacturer can be in scope of both simultaneously in different capacities (see `../resources/relationship-to-other-eu-law.md`).
 
 ---
 

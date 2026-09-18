@@ -18,7 +18,7 @@ Where technical documentation submitted by a manufacturer or importer doesn't su
 
 **Improper use of the CE marking**
 
-Article 20(4) requires Member States to build on existing mechanisms to ensure the CE marking regime is applied correctly, and to take appropriate action against improper use of the marking. Affixing a CE mark to equipment that does not actually meet the applicable essential requirements — or to equipment not covered by CE-marking legislation at all — is treated as a compliance failure in its own right, separate from any underlying technical non-conformity. The same principle applies under the CRA (see the "false declaration" discussion in [`cra-red-ce-marking-guide.md`](../cra-red-ce-marking-guide.md)).
+Article 20(4) requires Member States to build on existing mechanisms to ensure the CE marking regime is applied correctly, and to take appropriate action against improper use of the marking. Affixing a CE mark to equipment that does not actually meet the applicable essential requirements — or to equipment not covered by CE-marking legislation at all — is treated as a compliance failure in its own right, separate from any underlying technical non-conformity. The same principle applies under the CRA (see the "false declaration" discussion in [`cra-red-ce-marking-guide.md`](../resources/cra-red-ce-marking-guide.md)).
 
 **Notified-body oversight**
 

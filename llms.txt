@@ -37,11 +37,6 @@
 - [csa/eucc-certification.md](csa/eucc-certification.md): EUCC certification mechanics per the CSA framework — assurance levels, voluntary status, issuing bodies
 - [csa/faq.md](csa/faq.md): Practical FAQ for hardware/IoT manufacturers on CSA/EUCC
 
-## Cross-cutting
-
-- [relationship-to-other-eu-law.md](relationship-to-other-eu-law.md): CRA's relationship with RED, NIS2, AI Act, CSA/EUCC, GDPR
-- [cra-red-ce-marking-guide.md](cra-red-ce-marking-guide.md): Practical step-by-step guide to CE marking under both CRA and RED
-
 ## Primary sources (English, unmodified official text — cite these for exact article wording)
 
 - [primary-sources/index.md](primary-sources/index.md): Index and reuse terms for the primary-source mirror
@@ -53,6 +48,21 @@
 - [primary-sources/red-implementing-decision-eu-2025-138-en-18031.md](primary-sources/red-implementing-decision-eu-2025-138-en-18031.md): Implementing Decision (EU) 2025/138
 - [primary-sources/nis2-directive-eu-2022-2555.md](primary-sources/nis2-directive-eu-2022-2555.md): Directive (EU) 2022/2555, NIS2. Articles 1-46 complete, Annexes I-II complete; recitals partially captured
 - [primary-sources/cybersecurity-act-eu-2019-881.md](primary-sources/cybersecurity-act-eu-2019-881.md): Regulation (EU) 2019/881, Cybersecurity Act. Articles 1-69 + Annex complete; recitals not captured
+
+## Resources (independent frameworks/playbooks used alongside this legislation, plus our own cross-cutting analyses)
+
+- [resources/index.md](resources/index.md): Index and scope for this folder
+- [resources/psa-certified.md](resources/psa-certified.md): PSA Certified — IoT hardware security framework + independent lab certification (Root of Trust, 4 levels), GlobalPlatform
+- [resources/enisa-secure-by-design-default-playbook.md](resources/enisa-secure-by-design-default-playbook.md): ENISA Secure by Design and Default Playbook — 22 practical checklists for SME engineering teams, CC BY 4.0
+- [resources/relationship-to-other-eu-law.md](resources/relationship-to-other-eu-law.md): CRA's relationship with RED, NIS2, AI Act, CSA/EUCC, GDPR (our own cross-cutting analysis)
+- [resources/cra-red-ce-marking-guide.md](resources/cra-red-ce-marking-guide.md): Practical step-by-step guide to CE marking under both CRA and RED (our own cross-cutting analysis)
+
+## SBOM (Software Bill of Materials formats, VEX, worked examples — CRA Annex I, Part II, point 1)
+
+- [sbom/index.md](sbom/index.md): Index and scope for this folder
+- [sbom/formats-and-specifications.md](sbom/formats-and-specifications.md): SBOM formats (CycloneDX, SPDX, SWID) and the 2026 CISA minimum elements for SBOM content
+- [sbom/vex.md](sbom/vex.md): VEX — documenting whether an SBOM vulnerability actually affects the product; CycloneDX VEX, CSAF VEX, OpenVEX
+- [sbom/examples.md](sbom/examples.md): Worked example SBOM for the same hypothetical device in both CycloneDX and SPDX, plus a CycloneDX example with an embedded VEX statement
 
 ## Optional
 

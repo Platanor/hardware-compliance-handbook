@@ -155,17 +155,17 @@ Part II of Annex I governs the operational vulnerability-handling processes a ma
 
 **Point 1: creating and keeping the software bill of materials (SBOM) up to date**
 
-The manufacturer must identify and document all of a product's software components, including creating a detailed software bill of materials (SBOM) in a machine-readable format, covering at least direct dependencies.
+The manufacturer must identify and document all of a product's software components, including creating a software bill of materials (SBOM) in a commonly used, machine-readable format, covering at the very least the top-level dependencies of the product.
 
 The engineer must build automatic SBOM generation into the product's CI/CD build process. The generated SBOM is kept as part of the product's technical documentation and updated whenever the set of dependencies changes.
 
-The technical solution uses SBOM-generation tools (Syft, CycloneDX CLI, cdxgen), exporting to the standard machine-readable CycloneDX or SPDX formats in JSON or XML. Storing and monitoring the SBOM is done in dedicated systems (Dependency-Track).
+The technical solution uses SBOM-generation tools ([Syft](https://github.com/anchore/syft), CycloneDX CLI, cdxgen), exporting to the standard machine-readable CycloneDX or SPDX formats in JSON or XML — Syft builds an SBOM by inspecting container images, filesystems, and archives, cdxgen builds one by scanning source code across many languages, and CycloneDX CLI does not generate an SBOM at all but converts, merges, diffs, and validates SBOMs the other two already produced. Storing and monitoring the SBOM is done in dedicated systems (Dependency-Track). For what these two formats actually are and what the current international baseline expects an SBOM to contain, see [`sbom/formats-and-specifications.md`](../sbom/formats-and-specifications.md).
 
 **Point 2: prompt vulnerability remediation and providing updates**
 
-Discovered vulnerabilities must be remediated without condition and without undue delay, through developing and freely providing security updates or patches.
+Discovered vulnerabilities must be addressed and remediated without delay, through developing and freely providing security updates or patches (Annex I Part II point (2) — the regulation's own wording is "without delay", not "without undue delay").
 
-The engineer must set up continuous, automated monitoring for new CVEs across all components listed in the SBOM. When a vulnerability is found, an urgent task is created to update the component, run regression testing, and release a targeted fix.
+The engineer must set up continuous, automated monitoring for new CVEs across all components listed in the SBOM. When a vulnerability is found, an urgent task is created to update the component, run regression testing, and release a targeted fix. A VEX statement (see [`sbom/vex.md`](../sbom/vex.md)) is useful evidence for *why* a given CVE was or wasn't treated as urgent — it does not change this "without delay" obligation, and it is not a basis for skipping the separate Article 14 duty to report an actively exploited vulnerability within 24 hours.
 
 Practical solutions include integrating the Dependency-Track platform with issue-tracking systems (Jira, GitLab Issues), where tickets with clear remediation deadlines are created automatically based on CVSS severity, and using dedicated patch branches in Git.
 
@@ -246,13 +246,12 @@ For a summary view, the table below maps each point of Annex I to concrete tools
 | **Part II (7)** | Update-channel protection | TUF (The Update Framework), Cosign/Ed25519 signing | prEN 40000-1-3 |
 | **Part II (8)** | Free-of-charge patches | Public open CDN for patches, no authentication | prEN 40000-1-3 |
 
-**Companion resource: ENISA's Secure by Design and Default Playbook**
+**Companion resources: independent frameworks and playbooks**
 
-On 30 July 2026, ENISA published its own official Secure by Design and Default Playbook, distributed under CC-BY 4.0 as a GitHub repository: [github.com/enisaeu/enisa-sbd-playbook](https://github.com/enisaeu/enisa-sbd-playbook) (source PDF: [ENISA publication page](https://www.enisa.europa.eu/publications/enisa-secure-by-design-and-default-playbook)).
+Two independent, non-legal resources are useful cross-checks against the table above — full write-ups in [`resources/`](../resources/index.md):
 
-It approaches the same requirements from the opposite direction to the matrix above. Instead of starting from an Annex I point and arriving at an engineering solution, it starts from 22 engineering principles — 14 grouped under Secure by Design (trust boundaries and threat modelling, least privilege, secure coding practices, supply-chain controls, and others), 8 under Secure by Default (minimisation of default services, secure communication by default, automated updates, and others) — and its Annex C maps each one to the corresponding Annex I requirement. Each principle is documented as a one-page playbook with an objective, a checklist, minimum evidence, and a release gate.
-
-Useful as a second, EU-official cross-check when auditing an existing product's architecture: work through the 22 principles independently, then confirm each gap found also shows up against the matching point in the table above. It does not replace the article-by-article legal analysis in this file — the playbook is deliberately non-legal guidance and does not name specific Annex I sub-points inside the principle text itself; the mapping lives only in its Annex C.
+- **ENISA's Secure by Design and Default Playbook** ([`resources/enisa-secure-by-design-default-playbook.md`](../resources/enisa-secure-by-design-default-playbook.md)) — published 30 July 2026, CC BY 4.0, 22 checklist-style playbooks covering the same ground as Part I and Part II in engineering terms. Work through it independently, then confirm any gap found also shows up against the matching point in the table above — it does not replace the article-by-article legal analysis in this file, and does not name specific Annex I sub-points inside the principle text itself (the mapping lives only in its own Annex C).
+- **PSA Certified** ([`resources/psa-certified.md`](../resources/psa-certified.md)) — an independent, lab-evaluated IoT hardware security framework (Root of Trust, 10 Security Goals, 4 certification levels) run by GlobalPlatform. Not required by the CRA and not mapped to any specific Annex I point in law, but a practical way to get third-party evidence for the underlying engineering claim behind points 2(d) and 2(f) — unauthorised-access protection and integrity protection — rather than a self-assessment.
 
 **Conclusions and practical recommendations**
 

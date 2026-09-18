@@ -26,7 +26,7 @@
 
 - [`../csa/overview.md`](../csa/overview.md) — processed guide: what the CSA is and how it differs from CRA/RED/NIS2
 - [`../csa/eucc-certification.md`](../csa/eucc-certification.md) — processed guide: the EUCC scheme specifically, assurance levels, voluntary-vs-mandatory status
-- [`../relationship-to-other-eu-law.md`](../relationship-to-other-eu-law.md) — cross-cutting comparison with CRA, RED, NIS2, GDPR, AI Act
+- [`../resources/relationship-to-other-eu-law.md`](../resources/relationship-to-other-eu-law.md) — cross-cutting comparison with CRA, RED, NIS2, GDPR, AI Act
 
 ---
 

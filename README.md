@@ -90,9 +90,9 @@ The processed guides have been fact-checked against the primary text of each reg
 
 | File | What it covers |
 |---|---|
-| [`relationship-to-other-eu-law.md`](relationship-to-other-eu-law.md) | How the CRA interacts with other EU law: RED, NIS2, AI Act, CSA/EUCC, GDPR, and others |
-| [`cra-red-ce-marking-guide.md`](cra-red-ce-marking-guide.md) | Practical step-by-step guide to CE marking under both CRA and RED |
 | [`primary-sources/`](primary-sources/index.md) | Full official text of the CRA, M/606, RED, NIS2, CSA, and related acts |
+| [`resources/`](resources/index.md) | Independent frameworks and playbooks used alongside this legislation, plus our own cross-cutting analyses that span more than one regulation (PSA Certified, ENISA's Secure by Design and Default Playbook, the CRA/RED CE marking guide, how the CRA relates to other EU law) |
+| [`sbom/`](sbom/index.md) | CycloneDX and SPDX formats, VEX (CycloneDX VEX, CSAF VEX, OpenVEX), and worked examples of both SBOM formats side by side |
 
 ## Methodology and sourcing
 
@@ -131,7 +131,7 @@ However you install it, this remains a knowledge base, not a certified complianc
 
 ## Status
 
-Actively growing. Currently 25 processed documents across four regulations (CRA, RED, NIS2, CSA/EUCC) plus 8 primary-source mirrors; more material is planned as the underlying legislation develops (new harmonised standards, delegated/implementing acts, Commission guidance, and the still-unmirrored EUCC scheme implementing act).
+Actively growing. Currently 23 processed documents across four regulations (CRA, RED, NIS2, CSA/EUCC), 8 primary-source mirrors, 4 files in `resources/` (2 independent third-party write-ups plus 2 of our own cross-cutting guides), and 3 files in `sbom/` (SBOM formats, VEX, and worked examples in both CycloneDX and SPDX); more material is planned as the underlying legislation develops (new harmonised standards, delegated/implementing acts, Commission guidance, and the still-unmirrored EUCC scheme implementing act).
 
 ## Feedback
 
