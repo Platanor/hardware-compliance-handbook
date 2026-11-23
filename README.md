@@ -54,6 +54,7 @@ The processed guides have been fact-checked against the primary text of each reg
 | [`cra/obligations-by-role.md`](cra/obligations-by-role.md) | Manufacturer, importer, and distributor obligations (Chapter II) |
 | [`cra/timeline-deadlines.md`](cra/timeline-deadlines.md) | Key deadlines and transitional provisions |
 | [`cra/vulnerability-reporting.md`](cra/vulnerability-reporting.md) | Vulnerability and severe-incident reporting (Article 14) |
+| [`cra/standards-en-40000.md`](cra/standards-en-40000.md) | EN 40000 — the first CRA standards: status, what each part asks, effect on conformity route, what to do now |
 | [`cra/penalties-enforcement.md`](cra/penalties-enforcement.md) | Penalties and market surveillance |
 | [`cra/self-assessment-maturity-model.md`](cra/self-assessment-maturity-model.md) | ENISA SME Cyber Resilience Maturity Assessment Model |
 | [`cra/faq.md`](cra/faq.md) | Practical FAQ for hardware/IoT manufacturers |
